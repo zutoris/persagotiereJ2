@@ -3,6 +3,9 @@ package controllers;
 import javax.inject.*;
 import play.*;
 import play.mvc.*;
+import models.Participation;
+import models.Activity;
+import java.util.List;
 
 import services.Counter;
 
@@ -29,9 +32,13 @@ public class ChoiceController extends Controller {
      * requests by an entry in the <code>routes</code> config file.
      */
     public Result choice(String email) {
+        /*List<Participation> participations = Participation.find.where()
+        .ilike("email", email)
+        .getList();*/
         // interroger la BDD
         // si email exite, choix déjà fait
     	//return ok(viewChoice.render("Voici ce que vous avez sélectionné :"+email));
+    	//if (participations.)
     	return ok("Voici ce que vous avez sélectionné :"+email);
         // sinon
     	//return ok(views.html.makeChoice("Faites un choix."));
