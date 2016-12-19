@@ -11,6 +11,7 @@ public class Participation extends Model {
     @Id
     public int id;
     public String email;
+    @ManyToOne
     public Activity activity;
     
     public static Finder<Integer, Participation> find = new Finder<Integer,Participation>(Participation.class);
